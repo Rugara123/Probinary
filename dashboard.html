@@ -51,99 +51,77 @@
 
 <section class="dashboard">
 
-
 <div class="market-panel">
 
-<div class="market-header">
+    <div class="market-header">
 
-<div>
+        <div>
 
-<h3>Volatility 10 (1s)</h3>
+            <h3>Volatility 10 (1s)</h3>
 
-<small>Live Market Feed</small>
+            <small>Live Market</small>
 
-</div>
+        </div>
 
-<div class="live-price">
+        <div class="live-price">
 
-<span>Current Price</span>
+            <span>Price</span>
 
-<strong id="livePrice">--.--</strong>
+            <strong id="livePrice">--.--</strong>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
-<div id="chart"></div>
+    <div id="chart"></div>
 
-</div>
+    <div class="digit-area">
 
-<div class="trade-tabs">
+        <div class="digits">
 
-<button class="active">
-Matches / Differs
-</button>
+            <div class="digit"><span>0</span><p id="p0">0%</p></div>
+            <div class="digit"><span>1</span><p id="p1">0%</p></div>
+            <div class="digit"><span>2</span><p id="p2">0%</p></div>
+            <div class="digit"><span>3</span><p id="p3">0%</p></div>
+            <div class="digit"><span>4</span><p id="p4">0%</p></div>
+            <div class="digit"><span>5</span><p id="p5">0%</p></div>
+            <div class="digit"><span>6</span><p id="p6">0%</p></div>
+            <div class="digit"><span>7</span><p id="p7">0%</p></div>
+            <div class="digit"><span>8</span><p id="p8">0%</p></div>
+            <div class="digit"><span>9</span><p id="p9">0%</p></div>
 
-<button>
-Even / Odd
-</button>
+        </div>
 
-<button>
-Over / Under
-</button>
+        <div id="tickPointer">▲</div>
 
-</div>
-
-<h3>Digit Analysis</h3>
-
-<div class="digit-area">
-
-<div id="tickPointer">▼</div>
-
-<div class="digits">
-
-<div class="digit"><span>0</span><p id="p0">0%</p></div>
-<div class="digit"><span>1</span><p id="p1">0%</p></div>
-<div class="digit"><span>2</span><p id="p2">0%</p></div>
-<div class="digit"><span>3</span><p id="p3">0%</p></div>
-<div class="digit"><span>4</span><p id="p4">0%</p></div>
-<div class="digit"><span>5</span><p id="p5">0%</p></div>
-<div class="digit"><span>6</span><p id="p6">0%</p></div>
-<div class="digit"><span>7</span><p id="p7">0%</p></div>
-<div class="digit"><span>8</span><p id="p8">0%</p></div>
-<div class="digit"><span>9</span><p id="p9">0%</p></div>
+    </div>
 
 </div>
 
-</div>
 
 <div class="trade-panel">
 
-<h3>Market Analysis</h3>
+    <div class="control-grid">
 
-<p>
-Current Digit:
-<strong id="currentDigit">-</strong>
-</p>
+        <button>Auto</button>
+        <button>Manual</button>
 
-<p>
-Probability:
-<strong id="probability">--%</strong>
-</p>
+        <button>Stake</button>
+        <button>AI Scanner</button>
 
-<button class="trade-btn">
-Place Trade
-</button>
+        <button>Take Profit</button>
+        <button>Stop Loss</button>
 
-</div>
+        <button>Martingale</button>
+        <button>Multiplier</button>
 
-<div class="history">
+        <button>Even</button>
+        <button>Odd</button>
 
-<h3>Last Ticks</h3>
+        <button>Trade</button>
+        <button>Positions</button>
 
-<div id="historyDigits" class="history-digits">
-
-</div>
+    </div>
 
 </div>
 
