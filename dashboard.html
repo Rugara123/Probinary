@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,7 +12,9 @@
 
 </head>
 
+
 <body>
+
 
 <header class="topbar">
 
@@ -23,90 +27,167 @@
 </header>
 
 
+
 <section class="dashboard">
 
 
-<h2>Trade Type</h2>
-
 <div class="trade-types">
 
-<button>Matches / Differs</button>
+    <button>Matches / Differs</button>
 
-<button>Even / Odd</button>
+    <button>Even / Odd</button>
 
-<button>Over / Under</button>
+    <button>Over / Under</button>
 
- </div>   
+</div>
 
 
-<h2>Live Market</h2>
 
 <div class="chart-box">
-    <div class="line"></div>
-    <div id="tickPointer">●</div>
+
+    <div class="chart-line"></div>
+
 </div>
+
 
 
 <h2>Digit Analysis</h2>
 
-<div class="digits">
 
-<div class="digit">
-<span>0</span>
-<p id="p0">9.6%</p>
+<div class="digit-area">
+
+
+    <div id="tickPointer">
+        ▼
+    </div>
+
+
+    <div class="digits">
+
+        <div class="digit">
+            <span>0</span>
+            <p id="p0">9.6%</p>
+        </div>
+
+
+        <div class="digit">
+            <span>1</span>
+            <p id="p1">10.4%</p>
+        </div>
+
+
+        <div class="digit">
+            <span>2</span>
+            <p id="p2">11.5%</p>
+        </div>
+
+
+        <div class="digit">
+            <span>3</span>
+            <p id="p3">8.7%</p>
+        </div>
+
+
+        <div class="digit">
+            <span>4</span>
+            <p id="p4">9.9%</p>
+        </div>
+
+
+        <div class="digit">
+            <span>5</span>
+            <p id="p5">12.1%</p>
+        </div>
+
+
+        <div class="digit">
+            <span>6</span>
+            <p id="p6">10.8%</p>
+        </div>
+
+
+        <div class="digit">
+            <span>7</span>
+            <p id="p7">7.5%</p>
+        </div>
+
+
+        <div class="digit">
+            <span>8</span>
+            <p id="p8">9.2%</p>
+        </div>
+
+
+        <div class="digit">
+            <span>9</span>
+            <p id="p9">10.3%</p>
+        </div>
+
+
+    </div>
+
+
 </div>
 
-<div class="digit">
-<span>1</span>
-<p id="p1">10.4%</p>
+
+
+
+<div class="trade-panel">
+
+
+<h3>Current Trade</h3>
+
+
+<div class="selected-digit">
+
+Last Digit: <strong id="currentDigit">-</strong>
+
 </div>
 
-<div class="digit">
-<span>2</span>
-<p id="p2">11.5%</p>
+
+<div class="probability">
+
+Probability: <strong id="probability">--%</strong>
+
 </div>
 
-<div class="digit">
+
+
+<button class="trade-btn">
+Place Trade
+</button>
+
+
+
+</div>
+
+
+
+<div class="history">
+
+<h3>Tick History</h3>
+
+<div class="history-digits">
+
 <span>3</span>
-<p id="p3">8.7%</p>
-</div>
-
-<div class="digit">
-<span>4</span>
-<p id="p4">9.9%</p>
-</div>
-
-<div class="digit">
-<span>5</span>
-<p id="p5">12.1%</p>
-</div>
-
-<div class="digit">
-<span>6</span>
-<p id="p6">10.8%</p>
-</div>
-
-<div class="digit">
-<span>7</span>
-<p id="p7">7.5%</p>
-</div>
-
-<div class="digit">
 <span>8</span>
-<p id="p8">9.2%</p>
-</div>
-
-<div class="digit">
+<span>6</span>
+<span>1</span>
 <span>9</span>
-<p id="p9">10.3%</p>
+
 </div>
 
 </div>
+
 
 
 </section>
 
+
+
 <script src="dashboard.js"></script>
-    
+
+
 </body>
+
 </html>
