@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #08111f;
+    color: white;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #101c33;
+}
+
+.balance {
+    background: #142746;
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+
+.dashboard {
+    padding: 25px;
+}
+
+
+h2 {
+    margin-top: 25px;
+}
+
+
+/* Digit row */
+
+.digits {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 20px 5px;
+}
+
+
+.digit {
+    min-width: 70px;
+    height: 90px;
+    background: #13243d;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.digit span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.digit p {
+    margin: 5px 0 0;
+    color: #00e6a8;
+    font-size: 14px;
+}
+
+
+/* Trade buttons */
+
+.trade-types {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.trade-types button {
+    background: #00e6a8;
+    color: #08111f;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.trade-types button:hover {
+    opacity: 0.8;
+}
