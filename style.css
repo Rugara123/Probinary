@@ -148,3 +148,64 @@ nav ul li a:hover{
 .card p{
     color:#d1d5db;
 }
+.dashboard-preview{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    padding:100px 8%;
+    flex-wrap:wrap;
+}
+
+.dashboard-text{
+    flex:1;
+    min-width:300px;
+}
+
+.dashboard-text h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.dashboard-text p{
+    color:#cbd5e1;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.dashboard-box{
+    flex:1;
+    min-width:320px;
+    background:#18253f;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.balance{
+    background:#0b1120;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.balance h3{
+    color:#00d4ff;
+}
+
+.balance h1{
+    margin-top:10px;
+    font-size:38px;
+}
+
+.chart{
+    height:250px;
+    border-radius:15px;
+    background:#10192d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#00d4ff;
+    font-size:22px;
+}
