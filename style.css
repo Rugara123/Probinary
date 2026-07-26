@@ -359,3 +359,50 @@ nav ul li a:hover{
     text-align:center;
     color:#94a3b8;
 }
+.login-container{
+    width:380px;
+    max-width:90%;
+    margin:120px auto;
+    background:#18253f;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.login-container h2{
+    color:#00d4ff;
+    margin-bottom:10px;
+}
+
+.login-container p{
+    color:#cbd5e1;
+    margin-bottom:20px;
+}
+
+.login-container input{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+    background:#10192d;
+    color:white;
+}
+
+.login-container button{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    border:none;
+    border-radius:8px;
+    background:#00d4ff;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.login-container a{
+    color:#00d4ff;
+    text-decoration:none;
+}
