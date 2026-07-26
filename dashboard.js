@@ -1,53 +1,79 @@
-const percentages = [
-    9.6, 10.4, 11.5, 8.7, 9.9,
-    12.1, 10.8, 7.5, 9.2, 10.3
-];
+// ===== ProBinary Live Dashboard =====
 
-let currentDigit = 0;
+const appId = 1089; // Public Deriv app ID
 
-function updateDigits() {
+const ws = new WebSocket(
+    `wss://ws.derivws.com/websockets/v3?app_id=${appId}`
+);
+
+const symbol = "R_10_1S";
+
+const prices = [];
+const digitCount = Array(10).fill(0);
+const history = [];
+
+ws.onopen = () => {
+
+    ws.send(JSON.stringify({
+        ticks: symbol,
+        subscribe: 1
+    }));
+
+};
+
+ws.onmessage = (event) => {
+
+    const data = JSON.parse(event.data);
+
+    if (!data.tick) return;
+
+    const price = data.tick.quote;
+
+    document.getElementById("livePrice").innerHTML = price;
+
+    const digit = Number(
+        price.toString().slice(-1)
+    );
+
+    document.getElementById("currentDigit").innerHTML = digit;
+
+    history.unshift(digit);
+
+    if (history.length > 100)
+        history.pop();
+
+    digitCount.fill(0);
+
+    history.forEach(d => digitCount[d]++);
 
     for (let i = 0; i < 10; i++) {
 
-        let change = (Math.random() * 2 - 1).toFixed(1);
+        const percentage =
+            history.length
+                ? ((digitCount[i] / history.length) * 100).toFixed(1)
+                : "0.0";
 
-        percentages[i] = Math.max(
-            1,
-            (Number(percentages[i]) + Number(change)).toFixed(1)
-        );
+        const p = document.getElementById("p" + i);
 
-        document.getElementById("p" + i).innerHTML =
-            percentages[i] + "%";
+        if (p)
+            p.innerHTML = percentage + "%";
+
     }
 
-}
+    movePointer(digit);
 
+};
 
-function moveTick() {
+function movePointer(digit){
 
     const pointer = document.getElementById("tickPointer");
 
-    if (!pointer) return;
-
     const digits = document.querySelectorAll(".digit");
 
-    const selected = digits[currentDigit];
+    if(!digits[digit]) return;
 
-    const position = selected.offsetLeft +
-    (selected.offsetWidth / 2);
-
-    pointer.style.left = position + "px";
-
-
-    currentDigit++;
-
-    if (currentDigit > 9) {
-        currentDigit = 0;
-    }
+    pointer.style.left =
+        digits[digit].offsetLeft +
+        (digits[digit].offsetWidth/2) - 6 + "px";
 
 }
-
-
-setInterval(updateDigits, 1000);
-
-setInterval(moveTick, 700);
