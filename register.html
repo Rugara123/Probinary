@@ -15,19 +15,21 @@
 
 <p>Join ProBinary and start trading today.</p>
 
-<form>
+<form id="registerForm">
 
-<input type="text" placeholder="Full Name" required>
+<input type="text" id="name" placeholder="Full Name" required>
 
-<input type="email" placeholder="Email Address" required>
+<input type="email" id="email" placeholder="Email Address" required>
 
-<input type="password" placeholder="Create Password" required>
+<input type="password" id="password" placeholder="Create Password" required>
 
-<input type="password" placeholder="Confirm Password" required>
+<input type="password" id="confirmPassword" placeholder="Confirm Password" required>
 
 <button type="submit">Create Account</button>
 
 </form>
+
+<p id="message"></p>
 
 <p>
 Already have an account?
@@ -35,6 +37,8 @@ Already have an account?
 </p>
 
 </div>
+
 <script type="module" src="auth.js"></script>
+
 </body>
 </html>
