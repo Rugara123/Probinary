@@ -1,11 +1,12 @@
-import {
-  signInWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { auth } from "./firebase.js";
 
 import {
-  createUserWithEmailAndPassword
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
+// REGISTER
 
 const registerForm = document.getElementById("registerForm");
 
@@ -42,18 +43,10 @@ if (registerForm) {
   });
 
 }
-function login(event) {
-    event.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
 
-    if (email && password) {
-        window.location.href = "dashboard.html";
-    } else {
-        alert("Enter email and password");
-    }
-}
+// LOGIN
+
 const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
