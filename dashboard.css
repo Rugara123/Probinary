@@ -1,153 +1,249 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #08111f;
-    color: white;
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    background: #07111f;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
 .topbar {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+
+    padding: 15px;
+
     background: #101c33;
 }
 
+
 .balance {
-    background: #142746;
-    padding: 12px 20px;
+
+    background: #162944;
+    padding: 10px 15px;
     border-radius: 10px;
+
 }
 
 
 .dashboard {
-    padding: 25px;
+
+    padding: 15px;
+
 }
 
 
-h2 {
-    margin-top: 25px;
-}
 
-
-/* Digit row */
-
-.digits {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    padding: 20px 5px;
-}
-
-
-.digit {
-    min-width: 70px;
-    height: 90px;
-    background: #13243d;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.digit span {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-
-.digit p {
-    margin: 5px 0 0;
-    color: #00e6a8;
-    font-size: 14px;
-}
-
-
-/* Trade buttons */
+/* Trade Types */
 
 .trade-types {
+
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 8px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+
 }
 
 
 .trade-types button {
-    background: #00e6a8;
-    color: #08111f;
+
+    min-width: 120px;
+    padding: 12px;
+
     border: none;
-    padding: 15px 20px;
     border-radius: 8px;
+
+    background: #00e6a8;
+    color: #06111f;
+
     font-weight: bold;
-    cursor: pointer;
+
 }
 
 
-.trade-types button:hover {
-    opacity: 0.8;
-}
-/* Live graph */
+
+/* Graph */
 
 .chart-box {
+
     height: 120px;
+
     background: #101c33;
+
     border-radius: 12px;
-    margin: 20px 0;
+
+    margin-bottom: 20px;
+
     position: relative;
-    overflow: hidden;
+
 }
 
-.line {
-    width: 100%;
-    height: 2px;
-    background: #00e6a8;
+
+.chart-line {
+
     position: absolute;
+
     top: 60px;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: #00e6a8;
+
 }
 
 
-/* Moving tick pointer */
+
+/* Digits */
+
+.digit-area {
+
+    position: relative;
+
+    margin-top: 35px;
+
+}
+
 
 #tickPointer {
+
     position: absolute;
-    top: 40px;
-    left: 0;
+
+    top: -30px;
+
+    font-size: 22px;
+
     color: #00e6a8;
-    font-size: 25px;
-    transition: left 0.6s ease;
+
+    transition: left 0.5s ease;
+
 }
 
 
-/* Condense digits for phone */
 
 .digits {
+
     display: flex;
+
     justify-content: space-between;
-    gap: 5px;
-    overflow: hidden;
+
+    gap: 4px;
+
 }
+
 
 
 .digit {
-    min-width: 30px;
+
+    width: 32px;
+
     height: 55px;
-    border-radius: 50%;
+
     background: #13243d;
+
+    border-radius: 50%;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
+
 }
 
 
 .digit span {
-    font-size: 16px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
 }
 
 
 .digit p {
-    font-size: 10px;
+
+    font-size: 9px;
+
     margin: 2px 0;
+
+    color: #00e6a8;
+
+}
+
+
+
+/* Trade panel */
+
+
+.trade-panel {
+
+    margin-top: 25px;
+
+    background: #101c33;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+}
+
+
+.trade-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 15px;
+
+    background: #00e6a8;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+}
+
+
+
+/* History */
+
+
+.history {
+
+    margin-top: 20px;
+
+}
+
+
+.history-digits span {
+
+    display: inline-flex;
+
+    width: 35px;
+
+    height: 35px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #13243d;
+
+    margin-right: 5px;
+
 }
