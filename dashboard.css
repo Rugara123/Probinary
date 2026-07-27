@@ -87,9 +87,10 @@ margin-bottom:15px;
 
 .market-panel{
 background:#101c33;
-padding:15px;
+padding:12px;
 border-radius:15px;
-margin-bottom:20px;
+margin-bottom:15px;
+overflow:hidden;
 }
 
 .market-header{
@@ -118,24 +119,29 @@ color:#00e6a8;
 }
 
 #chart{
-height:240px;
-border-radius:12px;
+height:230px;
 background:#081321;
+border-radius:12px 12px 0 0;
+margin-bottom:0;
+padding-bottom:0;
+overflow:hidden;
 }
 
 .trade-tabs{
 display:flex;
-gap:8px;
-margin:20px 0;
+justify-content:space-between;
+gap:6px;
+margin-top:8px;
 }
 
 .trade-tabs button{
 flex:1;
-padding:12px;
-border:none;
-border-radius:10px;
+padding:8px 4px;
 background:#162944;
-color:white;
+border:none;
+border-radius:18px;
+color:#fff;
+font-size:11px;
 font-weight:bold;
 }
 
@@ -145,8 +151,10 @@ color:#081321;
 }
 
 .digit-area{
-margin-top:20px;
-position:relative;
+background:#081321;
+margin-top:0;
+padding:8px 8px 18px 8px;
+border-radius:0 0 12px 12px;
 }
 
 #tickPointer{
