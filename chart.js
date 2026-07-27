@@ -1,6 +1,6 @@
 // ===== ProBinary Live Chart =====
 
-const appId = 1089;
+const appId = YOUR_APP_ID;
 const symbol = "R_10_1S";
 
 const socket = new WebSocket(
@@ -39,7 +39,7 @@ const series = chart.addLineSeries({
 let points = [];
 
 socket.onopen = () => {
-
+console.log("Connected to Deriv WebSocket");
   socket.send(JSON.stringify({
     ticks: symbol,
     subscribe: 1
@@ -48,6 +48,8 @@ socket.onopen = () => {
 };
 
 socket.onmessage = (event) => {
+
+  console.log(event.data);
 
   const data = JSON.parse(event.data);
 
